@@ -1,0 +1,13 @@
+# Working directories (large files)
+pages/
+ocr_results/
+image_descriptions/
+output/
+
+# Cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db

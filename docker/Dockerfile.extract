@@ -1,0 +1,9 @@
+FROM python:3.12-slim
+
+RUN apt-get update && apt-get install -y poppler-utils && rm -rf /var/lib/apt/lists/*
+RUN pip install pypdf pdf2image Pillow
+
+WORKDIR /work
+COPY scripts/extract_pages.py /work/extract_pages.py
+
+ENTRYPOINT ["python", "extract_pages.py"]
